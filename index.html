@@ -2,26 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Fork Me! FCC: Test Suite Template</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
-
   <body>
-    <h1>Hello World, we are developers!</h1>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <header>
+      <h1 id="title">Survey Form</h1>
+      <p id="description">Please take a few minutes to fill out this survey</p>
+    </header>
+    <form id="survey-form">
+      <label for="name" id="name-label">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-    <!--
+      <label for="email" id="email-label">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-    Hello Camper!
+      <label for="number" id="number-label">Age:</label>
+      <input type="number" id="number" name="age" min="18" max="99" placeholder="Enter your age">
 
-    For now, the test suite only works in Chrome!
-    Please read the README below in the JS Editor before beginning.
-    Feel free to delete this message once you have read it.
-    Good luck and Happy Coding!
+      <label for="dropdown">What is your favorite color?</label>
+      <select id="dropdown" name="color">
+        <option value="" disabled selected>Select an option</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="red">Red</option>
+      </select>
 
-    - The freeCodeCamp Team
+      <fieldset>
+        <legend>What is your favorite food?</legend>
+        <label><input type="radio" name="food" value="pizza">Pizza</label>
+        <label><input type="radio" name="food" value="hamburger">Hamburger</label>
+        <label><input type="radio" name="food" value="tacos">Tacos</label>
+        <label><input type="radio" name="food" value="sushi">Sushi</label>
+      </fieldset>
 
-    -->
-    <script  src="js/index.js"></script>
+      <fieldset>
+        <legend>Which activities do you enjoy?</legend>
+        <label><input type="checkbox" name="activity" value="hiking">Hiking</label>
+        <label><input type="checkbox" name="activity" value="swimming">Swimming</label>
+        <label><input type="checkbox" name="activity" value="reading">Reading</label>
+        <label><input type="checkbox" name="activity" value="traveling">Traveling</label>
+      </fieldset>
+
+      <label for="comments">Additional Comments:</label>
+      <textarea id="comments" name="comments"></textarea>
+
+      <button type="submit" id="submit">Submit</button>
+    </form>
   </body>
 </html>
